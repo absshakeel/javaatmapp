@@ -1,0 +1,96 @@
+# ATM INTERFACE SYSTEM - PROJECT DESCRIPTION
+
+## Project Overview
+The ATM Interface System is a comprehensive Java-based application that simulates the functionality of an Automated Teller Machine (ATM). This console-based system provides a realistic banking experience with multiple user roles, secure authentication, and persistent data storage. The project demonstrates fundamental programming concepts including object-oriented design, file handling, user authentication, and transaction processing.
+
+## Technical Implementation
+
+### Architecture
+The system follows an object-oriented architecture with clear separation of concerns:
+
+1. **Core Classes**:
+   - Abstract `User` class serves as the base for different user types
+   - `Customer` and `Admin` classes extend the base User class with role-specific functionality
+   - `Account` class manages financial data and operations
+   - `Transaction` class represents financial transactions with timestamps
+   - `ATM` class orchestrates the overall system operation
+   - `FileStorage` utility handles data persistence
+
+2. **Data Persistence**:
+   The application implements a file-based database system using text files:
+   - `users.txt` - Stores user credentials and roles (CUSTOMER/ADMIN, ID, PIN)
+   - `accounts.txt` - Maintains account information (User ID, Account Number, Balance)
+   - `transactions.txt` - Records transaction history (User ID, Type, Amount, Balance, Timestamp)
+
+3. **Security Features**:
+   - PIN-based authentication system
+   - Role-based access control (Customer vs Admin privileges)
+   - Input validation to prevent invalid operations
+   - Transaction logging for audit purposes
+
+## Functional Features
+
+### Customer Features
+- Secure login with User ID and PIN
+- Account balance inquiry
+- Cash deposit functionality
+- Cash withdrawal with balance validation
+- Transaction history viewing
+- Secure logout
+
+### Admin Features
+- System administration capabilities
+- User account management
+- System monitoring functionality
+
+## Technical Highlights
+
+1. **Object-Oriented Design**:
+   - Inheritance hierarchy (User → Customer/Admin)
+   - Encapsulation of data within appropriate classes
+   - Abstraction of common functionality
+   - Polymorphic behavior based on user roles
+
+2. **Error Handling**:
+   - Robust exception handling for file operations
+   - Input validation to prevent invalid transactions
+   - Graceful error recovery mechanisms
+
+3. **Data Management**:
+   - Persistent storage across application sessions
+   - Transaction logging with timestamps
+   - Real-time balance updates
+
+## Development Approach
+The project was developed using an incremental approach:
+
+1. Core class structure design and implementation
+2. User authentication system development
+3. Transaction processing functionality implementation
+4. File-based persistence layer creation
+5. User interface refinement
+6. Comprehensive testing and debugging
+
+## Learning Outcomes
+This project demonstrates proficiency in:
+
+- Java programming fundamentals
+- Object-oriented programming principles
+- File I/O operations
+- Data persistence techniques
+- User authentication implementation
+- Console-based user interface design
+- Error handling and input validation
+- Software architecture principles
+
+## Future Enhancements
+Potential areas for future development include:
+
+- Graphical user interface implementation
+- Database integration (replacing text files)
+- Enhanced security features (encryption, multi-factor authentication)
+- Additional banking features (transfers, bill payments)
+- Administrative reporting capabilities
+
+---
+Developed as a course project demonstrating practical application of programming concepts and software design principles.
